@@ -5,6 +5,7 @@
 //
 
 #import "DetailViewController.h"
+#import "Review.h"
 
 @implementation DetailViewController
 @synthesize addressLabel;
@@ -31,14 +32,14 @@
     restaurant.cuisineType = @"Peruvian";
     restaurant.yearOpened = 1995;
 
-//    Review* review1 = [[Review alloc] init];
-//    review1.text = @"What fab-u-lass chicken! We could eat it all day if we didn't have to stop to drink sangria!";
-//    review1.reviewer = @"The Addams";
-//    review1.score = 5;
-//    review1.numberOfHelpfulReviews = 19;
-//    review1.numberOfUnhelpfulReviews = 8;
+    Review* review1 = [[Review alloc] init];
+    review1.text = @"What fab-u-lass chicken! We could eat it all day if we didn't have to stop to drink sangria!";
+    review1.reviewer = @"The Addams";
+    review1.score = 5;
+    review1.numberOfHelpfulReviews = 19;
+    review1.numberOfUnhelpfulReviews = 8;
 //    
-//    Review* review2 = [[Review alloc] init];
+    Review* review2 = [[Review alloc] init];
 //    review2.text = @"I DONE POSTED ON DA INTARWEBS!";
 //    review2.reviewer = @"Anonymous";
 //    review2.score = 1;
@@ -60,7 +61,9 @@
 //    review4.numberOfUnhelpfulReviews = 5;
     
 
+    //restaurant = [NSArray arrayWithObjects:review:review1,nil];
     
+    helpfulReviewLabel.text = [review1 text];
     
     
     addressLabel.text = [restaurant address];

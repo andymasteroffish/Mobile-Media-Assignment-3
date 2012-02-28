@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A3D5C3214FC65CD00944BE8 /* Review.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3D5C3114FC65CD00944BE8 /* Review.m */; };
 		0E02F6BD14CD10E300C3EAE8 /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E02F6BC14CD10E300C3EAE8 /* Restaurant.m */; };
 		0E2AFF8614DE3F3600456523 /* Mug.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2AFF8514DE3F3600456523 /* Mug.m */; };
 		0E6F215614F9FE0F004F682D /* Star_OFF.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E6F215414F9FE0F004F682D /* Star_OFF.png */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A3D5C3014FC65CD00944BE8 /* Review.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Review.h; sourceTree = "<group>"; };
+		0A3D5C3114FC65CD00944BE8 /* Review.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Review.m; sourceTree = "<group>"; };
 		0E02F6BB14CD10E300C3EAE8 /* Restaurant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Restaurant.h; sourceTree = "<group>"; };
 		0E02F6BC14CD10E300C3EAE8 /* Restaurant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Restaurant.m; sourceTree = "<group>"; };
 		0E2AFF8414DE3F3600456523 /* Mug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mug.h; sourceTree = "<group>"; };
@@ -112,6 +115,8 @@
 				0E2AFF8414DE3F3600456523 /* Mug.h */,
 				0E2AFF8514DE3F3600456523 /* Mug.m */,
 				0EE5A6DA14BEB490006BB5E1 /* Supporting Files */,
+				0A3D5C3014FC65CD00944BE8 /* Review.h */,
+				0A3D5C3114FC65CD00944BE8 /* Review.m */,
 			);
 			path = Restaurants;
 			sourceTree = "<group>";
@@ -197,6 +202,7 @@
 				0EE5A6ED14BEB491006BB5E1 /* DetailViewController.m in Sources */,
 				0E02F6BD14CD10E300C3EAE8 /* Restaurant.m in Sources */,
 				0E2AFF8614DE3F3600456523 /* Mug.m in Sources */,
+				0A3D5C3214FC65CD00944BE8 /* Review.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
