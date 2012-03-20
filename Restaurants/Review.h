@@ -25,6 +25,8 @@
 @property(readwrite) int score;
 
 
+-(float) helpfulness;
+
 @end
 
 
