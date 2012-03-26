@@ -14,6 +14,11 @@
 //returns a percentage of the number of helpful ratings from the total number of ratings
 -(float) helpfulness
 {
+    
+    NSLog(@"Num helpful %@", numberOfHelpfulReviews);
+    NSLog(@"Num unhelpful %@", numberOfUnhelpfulReviews);
+          
+    NSLog(@"Checking %@", numberOfHelpfulReviews/(numberOfHelpfulReviews+numberOfUnhelpfulReviews));
     return numberOfHelpfulReviews/(numberOfHelpfulReviews+numberOfUnhelpfulReviews);
     
 }

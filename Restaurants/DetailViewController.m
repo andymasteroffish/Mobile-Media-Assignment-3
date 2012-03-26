@@ -66,7 +66,8 @@
 
     //restaurant = [NSArray arrayWithObjects:review:review1,nil];
     
-    helpfulReviewLabel.text = [review1 text];
+    //helpfulReviewLabel.text = [review1 text];
+    helpfulReviewLabel.text = [[restaurant mostHelpfulReview] text];
     
     
     addressLabel.text = [restaurant address];

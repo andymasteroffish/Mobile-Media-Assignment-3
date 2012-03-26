@@ -19,9 +19,20 @@
 -(Review*) mostHelpfulReview
 {
     //go through the arrays and find the one with high hiest helpful rating percentage
-    
-    for (Review* review in [Restaurant reviews]) {
+    float bestScore=0;
+    Review* bestReview;
+    for (Review* review in [self reviews]) {
         NSLog(@"Review Text: %@", review.text);
+        
+        NSLog(@"score: %@", [review helpfulness]);
+        if ([review helpfulness] > bestScore){
+            bestScore=[review helpfulness];
+            bestReview=review;
+        }
     }
+    
+    NSLog(@"Most helpful: %@", bestReview.text);
+    
+    return bestReview;
 }
 @end
