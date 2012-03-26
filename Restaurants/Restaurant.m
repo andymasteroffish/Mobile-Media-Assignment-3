@@ -24,7 +24,7 @@
     for (Review* review in [self reviews]) {
         NSLog(@"Review Text: %@", review.text);
         
-        NSLog(@"score: %@", [review helpfulness]);
+        NSLog(@"score: %f", [review helpfulness]);
         if ([review helpfulness] > bestScore){
             bestScore=[review helpfulness];
             bestReview=review;

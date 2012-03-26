@@ -15,11 +15,11 @@
 -(float) helpfulness
 {
     
-    NSLog(@"Num helpful %@", numberOfHelpfulReviews);
-    NSLog(@"Num unhelpful %@", numberOfUnhelpfulReviews);
+    NSLog(@"Num helpful %i", numberOfHelpfulReviews);
+    //NSLog(@"Num unhelpful %@", numberOfUnhelpfulReviews);
           
-    NSLog(@"Checking %@", numberOfHelpfulReviews/(numberOfHelpfulReviews+numberOfUnhelpfulReviews));
-    return numberOfHelpfulReviews/(numberOfHelpfulReviews+numberOfUnhelpfulReviews);
+    //NSLog(@"Checking %@", numberOfHelpfulReviews/(numberOfHelpfulReviews+numberOfUnhelpfulReviews));
+    return (float)numberOfHelpfulReviews/((float)numberOfHelpfulReviews+(float)numberOfUnhelpfulReviews);
     
 }
 @end
