@@ -63,13 +63,35 @@
     //toss there reviews into the array
     restaurant.reviews = [[NSArray alloc] initWithObjects:review1, review2, review3,review4, nil];
     
-
-    //restaurant = [NSArray arrayWithObjects:review:review1,nil];
-    
-    //helpfulReviewLabel.text = [review1 text];
+    //set the text to be the most helpful review
     helpfulReviewLabel.text = [[restaurant mostHelpfulReview] text];
-    
     helpfulReviewPercentageLabel.text = [NSString stringWithFormat:@"Most helpful review -- %i out of %i found this helpful.", [ [restaurant mostHelpfulReview] numberOfHelpfulReviews], [ [restaurant mostHelpfulReview] numberOfHelpfulReviews]+[ [restaurant mostHelpfulReview] numberOfUnhelpfulReviews]];
+    
+    //set the stars based on the review score
+    NSLog(@"avg score: %f", [restaurant averageCustomerReview] );
+
+    //set the stars by putting them in an array and using a nice loop to set them
+    NSArray* stars;
+    stars = [[NSArray alloc] initWithObjects:star1, star2, star3, star4, star5, nil];
+    for (int i=0; i<[stars count]; i++){
+        NSLog(@"checking: %i", i );
+        if ( [restaurant averageCustomerReview] >= (float)i+0.5 ){
+            NSLog(@"printing: %i", i );
+            ((UIImageView*)[stars objectAtIndex:i]).image = [UIImage imageNamed:@"Star_ON.png"];
+        }
+    }
+    
+    //setting the stars with good old if statements
+//    if ([restaurant averageCustomerReview]>=0.5)
+//        star1.image = [UIImage imageNamed:@"Star_ON.png"];
+//    if ([restaurant averageCustomerReview]>=1.5)
+//        star2.image = [UIImage imageNamed:@"Star_ON.png"];
+//    if ([restaurant averageCustomerReview]>=2.5)
+//        star3.image = [UIImage imageNamed:@"Star_ON.png"];
+//    if ([restaurant averageCustomerReview]>=3.5)
+//        star4.image = [UIImage imageNamed:@"Star_ON.png"];
+//    if ([restaurant averageCustomerReview]>=4.5)
+//        star5.image = [UIImage imageNamed:@"Star_ON.png"];
     
     
     addressLabel.text = [restaurant address];

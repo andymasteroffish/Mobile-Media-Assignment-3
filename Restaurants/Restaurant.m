@@ -22,17 +22,26 @@
     float bestScore=0;
     Review* bestReview;
     for (Review* review in [self reviews]) {
-        NSLog(@"Review Text: %@", review.text);
-        
-        NSLog(@"score: %f", [review helpfulness]);
         if ([review helpfulness] > bestScore){
             bestScore=[review helpfulness];
             bestReview=review;
         }
     }
     
-    NSLog(@"Most helpful: %@", bestReview.text);
     
     return bestReview;
 }
+
+-(float) averageCustomerReview;
+{
+    float total=0;
+    
+    for (Review* review in [self reviews]) {
+        total+= (float)[review score];
+    }
+    
+    return total/(float)[reviews count];
+    
+}
+
 @end

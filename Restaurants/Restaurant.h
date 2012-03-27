@@ -24,5 +24,6 @@
 
 -(int)age;
 -(Review*) mostHelpfulReview;
+-(float) averageCustomerReview;
 
 @end
