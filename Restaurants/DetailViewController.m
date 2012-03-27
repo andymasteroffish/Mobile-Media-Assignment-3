@@ -69,6 +69,8 @@
     //helpfulReviewLabel.text = [review1 text];
     helpfulReviewLabel.text = [[restaurant mostHelpfulReview] text];
     
+    helpfulReviewPercentageLabel.text = [NSString stringWithFormat:@"Most helpful review -- %i out of %i found this helpful.", [ [restaurant mostHelpfulReview] numberOfHelpfulReviews], [ [restaurant mostHelpfulReview] numberOfHelpfulReviews]+[ [restaurant mostHelpfulReview] numberOfUnhelpfulReviews]];
+    
     
     addressLabel.text = [restaurant address];
     navigationHeader.title = [restaurant name];
