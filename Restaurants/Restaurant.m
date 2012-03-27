@@ -44,4 +44,9 @@
     
 }
 
+-(void) addReview:(Review*) newReview
+{
+    [reviews addObject: newReview];
+}
+
 @end

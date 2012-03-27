@@ -60,8 +60,13 @@
     review4.numberOfHelpfulReviews = 14;
     review4.numberOfUnhelpfulReviews = 5;
     
-    //toss there reviews into the array
-    restaurant.reviews = [[NSArray alloc] initWithObjects:review1, review2, review3,review4, nil];
+    restaurant.reviews = [[NSMutableArray alloc] init];
+    [restaurant addReview:review1];
+    [restaurant addReview:review2];
+    [restaurant addReview:review3];
+    [restaurant addReview:review4];
+    //toss the reviews into the array
+    //restaurant.reviews = [[NSArray alloc] initWithObjects:review1, review2, review3,review4, nil];
     
     //set the text to be the most helpful review
     helpfulReviewLabel.text = [[restaurant mostHelpfulReview] text];
