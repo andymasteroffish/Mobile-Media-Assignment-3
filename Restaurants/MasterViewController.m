@@ -123,6 +123,10 @@
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath
 {
+    
+    Restaurant* thisRestaurant;
+    thisRestaurant = [restaurants objectAtIndex:indexPath.row];
+    
     //This is the cell identifier we set in the Storyboard file
     NSString* cellIdentifier = @"RestaurantCell";
     
@@ -130,8 +134,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: cellIdentifier];
     
     //The cell type we selected in the storyboard supports a textLabel and a detailTextLabel. We'll set them both here.
-    cell.textLabel.text = @"Pio Pio";
-    cell.detailTextLabel.text = @"Peruvian";
+    cell.textLabel.text = thisRestaurant.name;
+    cell.detailTextLabel.text = thisRestaurant.cuisineType;
     return cell;
 }
 
