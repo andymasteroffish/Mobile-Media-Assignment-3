@@ -139,6 +139,25 @@
     return cell;
 }
 
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    //get the destination view controller
+    DetailViewController* detailVC = (DetailViewController*)
+    [segue destinationViewController];
+    
+    //get the table view
+    UITableView* table = [self tableView];
+    
+    //get the selected row's idnex path from the table
+    NSIndexPath* indexPath = [table indexPathForSelectedRow];
+    
+    //get the current restaurant using the index path
+    Restaurant* currentRestaurant = [restaurants objectAtIndex:indexPath.row];
+    
+    //set the detail view controller's restaurant
+    detailVC.restaurant = currentRestaurant;
+}
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath

@@ -8,6 +8,9 @@
 #import "Review.h"
 
 @implementation DetailViewController
+
+@synthesize restaurant;
+
 @synthesize addressLabel;
 @synthesize navigationHeader;
 @synthesize cuisineLabel;
@@ -19,6 +22,7 @@
 @synthesize star3;
 @synthesize star4;
 @synthesize star5;
+
 
 #pragma mark - View lifecycle
 
