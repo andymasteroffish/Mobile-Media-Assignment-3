@@ -8,7 +8,7 @@
 
 @implementation MasterViewController
 
-
+@synthesize restaurants;
 
 - (void)awakeFromNib
 {
@@ -27,6 +27,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    //set up restaurants array
+    restaurants = [[NSMutableArray alloc] init];
     
     //set up the restaurants
     Restaurant* piopio;
@@ -74,6 +77,9 @@
     //toss the reviews into the array
     //restaurant.reviews = [[NSArray alloc] initWithObjects:review1, review2, review3,review4, nil];
     
+    //add the restaurant to my array
+    [restaurants addObject: piopio];
+     
     
 }
 
