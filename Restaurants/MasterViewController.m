@@ -31,9 +31,8 @@
     //set up restaurants array
     restaurants = [[NSMutableArray alloc] init];
     
-    //set up the restaurants
+    //set up a restaurant
     Restaurant* piopio;
-    
     piopio = [[Restaurant alloc] init];
     
     piopio.name = @"Pio Pio";
@@ -74,11 +73,37 @@
     [piopio addReview:review2];
     [piopio addReview:review3];
     [piopio addReview:review4];
-    //toss the reviews into the array
-    //restaurant.reviews = [[NSArray alloc] initWithObjects:review1, review2, review3,review4, nil];
     
-    //add the restaurant to my array
+    //set up another restaurant
+    Restaurant* crabworld;
+    crabworld = [[Restaurant alloc] init];
+    
+    crabworld.name = @"Carl's Crappy Crabs";
+    crabworld.address = @"123 11th Ave\nNew York, NY 10128";
+    crabworld.cuisineType = @"Crab food";
+    crabworld.yearOpened = 1988;
+    
+    review1 = [[Review alloc] init];
+    review1.text = @"Nobody loves Carl. Definitely not me.";
+    review1.reviewer = @"The Addams";
+    review1.score = 1;
+    review1.numberOfHelpfulReviews = 15;
+    review1.numberOfUnhelpfulReviews = 11;
+    
+    review2 = [[Review alloc] init];
+    review2.text = @"I ate there and I cried. The next day my mother cried and would tell nobody why.";
+    review2.reviewer = @"Standle";
+    review2.score = 1;
+    review2.numberOfHelpfulReviews = 30;
+    review2.numberOfUnhelpfulReviews = 7;
+    
+    crabworld.reviews = [[NSMutableArray alloc] init];
+    [crabworld addReview:review1];
+    [crabworld addReview:review2];
+    
+    //add the restaurants to my array
     [restaurants addObject: piopio];
+    [restaurants addObject: crabworld];
      
     
 }
