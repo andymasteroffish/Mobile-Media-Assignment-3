@@ -101,9 +101,37 @@
     [crabworld addReview:review1];
     [crabworld addReview:review2];
     
+    //set up another restaurant
+    Restaurant* trustHole;
+    trustHole = [[Restaurant alloc] init];
+    
+    trustHole.name = @"The Trusting Hole";
+    trustHole.address = @"Deep, deep in the earth\nNew York, NY 10128";
+    trustHole.cuisineType = @"Spiritual";
+    trustHole.yearOpened = 1988;
+    
+    review1 = [[Review alloc] init];
+    review1.text = @"A Powerful force has brought me here for reasons that I do not yet understand.";
+    review1.reviewer = @"The First";
+    review1.score = 5;
+    review1.numberOfHelpfulReviews = 20;
+    review1.numberOfUnhelpfulReviews = 14;
+    
+    review2 = [[Review alloc] init];
+    review2.text = @"The food is without taste, but I feel nourished in ways I have never felt in the past.";
+    review2.reviewer = @"The Second";
+    review2.score = 5;
+    review2.numberOfHelpfulReviews = 26;
+    review2.numberOfUnhelpfulReviews = 3;
+    
+    trustHole.reviews = [[NSMutableArray alloc] init];
+    [trustHole addReview:review1];
+    [trustHole addReview:review2];
+    
     //add the restaurants to my array
     [restaurants addObject: piopio];
     [restaurants addObject: crabworld];
+    [restaurants addObject: trustHole];
      
     
 }
