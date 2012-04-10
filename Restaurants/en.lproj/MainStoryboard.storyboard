@@ -72,6 +72,45 @@
             </objects>
             <point key="canvasLocation" x="455" y="64"/>
         </scene>
+        <!--Review View Controller-->
+        <scene sceneID="bZH-1q-qBC">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EDT-bf-7fC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="7Up-cj-e8H" customClass="ReviewViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ZQ5-ii-A5Q">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ReviewCell" textLabel="ZpO-r7-cXk" style="IBUITableViewCellStyleDefault" id="697-NY-x33">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZpO-r7-cXk">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="7Up-cj-e8H" id="V5T-Or-H0z"/>
+                            <outlet property="delegate" destination="7Up-cj-e8H" id="8NL-7S-drS"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="jTa-l4-xHN"/>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="1342" y="64"/>
+        </scene>
         <!--Detail View Controller - Detail-->
         <scene sceneID="24">
             <objects>
@@ -141,19 +180,35 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="&quot;One of the finest establishments I've ever had the pleasure to visit. The aji sauce is unreal!&quot; — Tim Riggins" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" id="XbE-dt-chC">
-                                <rect key="frame" x="20" y="331" width="280" height="47"/>
+                                <rect key="frame" x="20" y="297" width="280" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Most helpful review  —  14 of 15 found this helpful" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" id="VI3-18-5XF">
-                                <rect key="frame" x="20" y="372" width="280" height="24"/>
+                                <rect key="frame" x="20" y="338" width="280" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="11"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ezi-uQ-RRJ">
+                                <rect key="frame" x="25" y="370" width="264" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label=""/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Show All Reviews">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="7Up-cj-e8H" kind="push" id="ed3-D5-NxJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -179,27 +234,6 @@
     <resources>
         <image name="Star_OFF.png" width="37" height="37"/>
     </resources>
-    <classes>
-        <class className="DetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="addressLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="ageLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="cuisineLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="helpfulReviewLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="helpfulReviewPercentageLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="navigationHeader" candidateClass="UINavigationItem"/>
-                <relationship kind="outlet" name="star1" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="star2" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="star3" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="star4" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="star5" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="MasterViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
