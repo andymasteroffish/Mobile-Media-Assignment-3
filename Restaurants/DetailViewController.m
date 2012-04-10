@@ -99,5 +99,12 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+//this was not here before. I ahd to add it
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    ReviewViewController* reviewVC= (ReviewViewController*) [segue destinationViewController];
+    reviewVC.restaurant=restaurant;
+}
+
 
 @end

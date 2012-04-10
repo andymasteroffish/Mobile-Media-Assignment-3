@@ -14,6 +14,8 @@
 
 @implementation ReviewViewController
 
+@synthesize restaurant;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -59,7 +61,8 @@
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 1;
+    //return 1;
+    return [[restaurant reviews] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

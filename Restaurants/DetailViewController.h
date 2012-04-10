@@ -6,11 +6,14 @@
 
 #import <UIKit/UIKit.h>
 #import "Restaurant.h"
+#import "ReviewViewController.h"
 
 @interface DetailViewController : UIViewController
 {
     Restaurant* restaurant;
 }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender;
 
 @property (readwrite, strong) Restaurant* restaurant;
 
