@@ -52,14 +52,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
     //return 1;
     return [[restaurant reviews] count];
@@ -70,8 +68,13 @@
     static NSString *CellIdentifier = @"ReviewCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    // Configure the cell...
-    cell.textLabel.text= @"test"; 
+    UILabel* reviewTextLabel = (UILabel*) [cell viewWithTag:1];
+    UILabel* reviewHelpfulnessLabel = (UILabel*) [cell viewWithTag:2];
+    
+    Review* reviewForIndexPath = [restaurant.reviews objectAtIndex:indexPath.row];
+    reviewTextLabel.text = reviewForIndexPath.text;
+    reviewHelpfulnessLabel.text = [NSString stringWithFormat:@"%i of %i found this review helpful", reviewForIndexPath.numberOfHelpfulReviews, reviewForIndexPath.numberOfUnhelpfulReviews+reviewForIndexPath.numberOfHelpfulReviews];
+    
     
     return cell;
 }

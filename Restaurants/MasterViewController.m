@@ -111,7 +111,7 @@
     trustHole.yearOpened = 1988;
     
     review1 = [[Review alloc] init];
-    review1.text = @"A Powerful force has brought me here for reasons that I do not yet understand.";
+    review1.text = @"A powerful force has brought me here for reasons that I do not yet understand.";
     review1.reviewer = @"The First";
     review1.score = 5;
     review1.numberOfHelpfulReviews = 20;
@@ -124,9 +124,17 @@
     review2.numberOfHelpfulReviews = 26;
     review2.numberOfUnhelpfulReviews = 3;
     
+    review3 = [[Review alloc] init];
+    review3.text = @"I have no knowledge of who I am, who I was, or the life I led before dining here. I know only the hole, the earth, and the deep sustance I feel from the food provided.";
+    review3.reviewer = @"The Second";
+    review3.score = 5;
+    review3.numberOfHelpfulReviews = 13;
+    review3.numberOfUnhelpfulReviews = 1;
+    
     trustHole.reviews = [[NSMutableArray alloc] init];
     [trustHole addReview:review1];
     [trustHole addReview:review2];
+    [trustHole addReview:review3];
     
     //add the restaurants to my array
     [restaurants addObject: piopio];
