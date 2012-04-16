@@ -17,6 +17,7 @@
 @synthesize ageLabel;
 @synthesize helpfulReviewPercentageLabel;
 @synthesize helpfulReviewLabel;
+@synthesize favoriteButton;
 @synthesize star1;
 @synthesize star2;
 @synthesize star3;
@@ -53,6 +54,11 @@
     cuisineLabel.text = [restaurant cuisineType];
     ageLabel.text = [NSString stringWithFormat:@"Est. %i (%i years ago)", restaurant.yearOpened, [restaurant age]];
     
+    //show the selected image or not depending on the state of isFavorite
+    if (restaurant.isFavorite)
+        favoriteButton.image = [UIImage imageNamed:@"heart-selected.png"];
+    else
+        favoriteButton.image = [UIImage imageNamed:@"heart.png"];
 }
 
 
@@ -70,6 +76,7 @@
     [self setStar3:nil];
     [self setStar4:nil];
     [self setStar5:nil];
+    [self setFavoriteButton:nil];
     [super viewDidUnload];
 }
 
@@ -107,4 +114,13 @@
 }
 
 
+- (IBAction)markAsFavorite:(id)sender {
+    [restaurant toggleFavorite];
+    
+    //show the selected image or not depending on the state of isFavorite
+    if (restaurant.isFavorite)
+        favoriteButton.image = [UIImage imageNamed:@"heart-selected.png"];
+    else
+        favoriteButton.image = [UIImage imageNamed:@"heart.png"];
+}
 @end

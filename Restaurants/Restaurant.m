@@ -7,7 +7,7 @@
 
 
 @implementation Restaurant
-@synthesize address, name, cuisineType, yearOpened, reviews;
+@synthesize address, name, cuisineType, yearOpened, isFavorite, reviews;
 
 
 -(int)age
@@ -47,6 +47,12 @@
 -(void) addReview:(Review*) newReview
 {
     [reviews addObject: newReview];
+}
+
+-(void) toggleFavorite
+{
+    isFavorite=!isFavorite;
+    NSLog(@"favorite: %d", isFavorite);
 }
 
 @end
